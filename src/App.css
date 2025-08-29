@@ -1,46 +1,80 @@
 .site-layout-content {
-  background: #0a0a0a !important;
+  background: var(--site-layout-background);
   padding: 24px;
+  min-height: 280px;
   border-radius: 8px;
 }
 
-.logo {
+
+
+.header-title {
+  color: var(--header-text-color);
+  margin: 0;
   float: left;
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 0;
-  background: rgba(255, 255, 255, 0.2);
-  /* Vous pouvez remplacer ceci par votre propre logo */
 }
 
 .ant-card {
-  background: #141414;
-  border: 1px solid #303030;
-  color: #e8e8e8;
+  background: var(--card-background-color) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
 }
 
 .ant-card-meta-title {
-  color: #e8e8e8 !important;
+  color: var(--text-color) !important;
 }
 
-.ant-modal-content {
-  background: #141414;
-  color: #e8e8e8;
+.ant-modal-content,
+.ant-modal-header {
+  background: var(--card-background-color) !important;
+  color: var(--text-color) !important;
 }
 
 .ant-modal-title {
-  color: #e8e8e8 !important;
+  color: var(--text-color) !important;
 }
 
 .ant-modal-close-x {
-  color: #e8e8e8;
+  color: var(--text-color) !important;
 }
 
 .ant-layout-header {
-  background: #001529;
+  background: var(--header-background) !important;
 }
 
 .ant-layout-footer {
-  background: #001529;
-  color: #aaa;
+  background: var(--footer-background) !important;
+  color: var(--footer-text-color) !important;
+}
+
+/* Styles pour les composants custom */
+.ant-typography,
+.ant-typography h1,
+.ant-typography h2,
+.ant-typography h3,
+.ant-typography h4 {
+  color: var(--text-color);
+}
+
+.ant-form-item-label > label {
+  color: var(--text-color);
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input:focus,
+.ant-input-focused {
+  background-color: var(--card-background-color) !important;
+  color: var(--text-color) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.ant-input::placeholder {
+    color: var(--text-color) !important;
+    opacity: 0.5;
+}
+
+.ant-tag {
+    color: var(--text-color);
+    background: var(--card-background-color);
+    border-color: var(--border-color);
 }
