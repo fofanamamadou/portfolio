@@ -13,6 +13,15 @@
   float: left;
 }
 
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .ant-card {
   background: var(--card-background-color) !important;
   border: 1px solid var(--border-color) !important;
@@ -48,15 +57,15 @@
 
 /* Styles pour les composants custom */
 .ant-typography,
-.ant-typography h1,
-.ant-typography h2,
-.ant-typography h3,
-.ant-typography h4 {
-  color: var(--text-color);
+h1.ant-typography,
+h2.ant-typography,
+h3.ant-typography,
+h4.ant-typography {
+  color: var(--text-color) !important;
 }
 
 .ant-form-item-label > label {
-  color: var(--text-color);
+  color: var(--text-color) !important;
 }
 
 .ant-input,
@@ -77,4 +86,47 @@
     color: var(--text-color);
     background: var(--card-background-color);
     border-color: var(--border-color);
+}
+
+.ant-drawer-close {
+  color: var(--text-color) !important;
+}
+
+/* Proactive fix for default buttons */
+.ant-btn-default {
+  background-color: var(--card-background-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.ant-btn-default:hover, .ant-btn-default:focus {
+  background-color: var(--card-background-color) !important;
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Proactive fix for bold text */
+strong, b {
+  color: var(--text-color) !important;
+}
+
+/* --- Responsive --- */
+
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  /* Default state is visible on desktop */
+}
+
+/* Breakpoint for tablets and mobile devices */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: inline-block !important;
+  }
 }

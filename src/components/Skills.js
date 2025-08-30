@@ -19,7 +19,7 @@ const Skills = () => {
           <Col xs={24} sm={12} md={6} key={category}>
             <Title level={4}>{category}</Title>
             {list.map(skill => (
-              <Tag color="blue" key={skill} style={{ margin: '4px' }}>{skill}</Tag>
+              <Tag key={skill} style={{ margin: '4px' }}>{skill}</Tag>
             ))}
           </Col>
         ))}

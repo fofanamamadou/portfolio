@@ -33,7 +33,7 @@ const ProjectModal = ({ project, visible, onClose }) => {
       <div style={{ margin: '24px 0' }}>
         <strong>Technologies:</strong><br />
         {project.technologies.map(tech => (
-          <Tag color="blue" key={tech} style={{ marginTop: '8px' }}>{tech}</Tag>
+          <Tag key={tech} style={{ marginTop: '8px' }}>{tech}</Tag>
         ))}
       </div>
 

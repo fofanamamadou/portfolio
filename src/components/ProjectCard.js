@@ -13,7 +13,7 @@ const ProjectCard = ({ project, onClick }) => {
       <Meta title={project.title} />
       <div style={{ marginTop: '16px' }}>
         {project.technologies.map(tech => (
-          <Tag color="blue" key={tech}>{tech}</Tag>
+          <Tag key={tech}>{tech}</Tag>
         ))}
       </div>
     </Card>

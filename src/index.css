@@ -21,13 +21,13 @@ code {
   --background-color: #ffffff;
   --text-color: #000000;
   --primary-color: #1890ff;
-  --card-background-color: #f0f2f5;
+  --card-background-color: rgba(255, 255, 255, 0.75);
   --border-color: #d9d9d9;
   --header-background: #001529;
   --header-text-color: #ffffff;
   --footer-background: #f0f2f5;
   --footer-text-color: rgba(0, 0, 0, 0.85);
-  --site-layout-background: #ffffff;
+  --site-layout-background: rgba(255, 255, 255, 0.65);
 }
 
 /* Thème sombre */
@@ -36,13 +36,13 @@ code {
     --background-color: #0a0a0a;
     --text-color: #e8e8e8;
     --primary-color: #1890ff;
-    --card-background-color: #141414;
+    --card-background-color: rgba(20, 20, 20, 0.75);
     --border-color: #303030;
     --header-background: #001529;
     --header-text-color: #ffffff;
     --footer-background: #001529;
     --footer-text-color: #aaaaaa;
-    --site-layout-background: #0a0a0a;
+    --site-layout-background: rgba(10, 10, 10, 0.65);
   }
 }
 

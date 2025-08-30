@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Form, Input, Button, Row, Col } from 'antd';
+import { Typography, Form, Input, Button, Row, Col, Space } from 'antd';
 import { LinkedinOutlined, GithubOutlined, MailOutlined } from '@ant-design/icons';
 
 const { Title } = Typography;
@@ -49,17 +49,17 @@ const Contact = () => {
         </Col>
         <Col xs={24} md={12}>
           <Title level={4}>Retrouvez-moi sur</Title>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <Button type="link" href="https://www.linkedin.com/in/votre-profil" target="_blank" icon={<LinkedinOutlined />} style={{ fontSize: '20px', padding: '0', height: 'auto', marginBottom: '10px' }}>
-              LinkedIn
-            </Button>
-            <Button type="link" href="https://github.com/votre_nom" target="_blank" icon={<GithubOutlined />} style={{ fontSize: '20px', padding: '0', height: 'auto', marginBottom: '10px' }}>
-              GitHub
-            </Button>
-            <Button type="link" href="mailto:votre.email@example.com" icon={<MailOutlined />} style={{ fontSize: '20px', padding: '0', height: 'auto' }}>
-              votre.email@example.com
-            </Button>
-          </div>
+          <Space size="large">
+            <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener noreferrer">
+              <LinkedinOutlined style={{ fontSize: '40px', color: 'var(--text-color)' }} />
+            </a>
+            <a href="https://github.com/votre_nom" target="_blank" rel="noopener noreferrer">
+              <GithubOutlined style={{ fontSize: '40px', color: 'var(--text-color)' }} />
+            </a>
+            <a href="mailto:votre.email@example.com">
+              <MailOutlined style={{ fontSize: '40px', color: 'var(--text-color)' }} />
+            </a>
+          </Space>
         </Col>
       </Row>
     </div>
