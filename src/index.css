@@ -1,53 +1,59 @@
+/* Active le défilement fluide (smooth scroll) pour les ancres de page */
 html {
   scroll-behavior: smooth;
 }
 
+/* Styles de base pour le corps de la page */
 body {
-  margin: 0;
+  margin: 0; /* Supprime les marges par défaut du navigateur */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif; /* Définit la pile de polices */
+  -webkit-font-smoothing: antialiased; /* Améliore le rendu des polices sur WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Améliore le rendu des polices sur Firefox */
 }
 
+/* Styles pour les blocs de code */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace; /* Définit la police pour les blocs de code */
 }
 
-/* Thème clair (par défaut) */
+/* Définition des variables CSS pour le thème clair (par défaut) */
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --primary-color: #1890ff;
-  --card-background-color: rgba(255, 255, 255, 0.75);
-  --border-color: #d9d9d9;
-  --header-background: #001529;
-  --header-text-color: #ffffff;
-  --footer-background: #f0f2f5;
-  --footer-text-color: rgba(0, 0, 0, 0.85);
-  --site-layout-background: rgba(255, 255, 255, 0.65);
+  --background-color: #ffffff; /* Couleur de fond principale */
+  --text-color: #000000; /* Couleur du texte principal */
+  --primary-color: #1890ff; /* Couleur primaire (utilisée pour les accents, boutons, etc.) */
+  --card-background-color: rgba(255, 255, 255, 0.75); /* Fond des cartes et modales (semi-transparent) */
+  --border-color: #d9d9d9; /* Couleur des bordures */
+  --header-background: #001529; /* Fond de l'en-tête */
+  --header-text-color: #ffffff; /* Couleur du texte de l'en-tête */
+  --footer-background: #f0f2f5; /* Fond du pied de page */
+  --footer-text-color: rgba(0, 0, 0, 0.85); /* Couleur du texte du pied de page */
+  --site-layout-background: rgba(255, 255, 255, 0.65); /* Fond du conteneur principal (semi-transparent) */
 }
 
-/* Thème sombre */
+/* Définition des variables CSS pour le thème sombre */
+/* S'applique lorsque le système d'exploitation préfère un thème sombre */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #0a0a0a;
-    --text-color: #e8e8e8;
-    --primary-color: #1890ff;
-    --card-background-color: rgba(20, 20, 20, 0.75);
-    --border-color: #303030;
-    --header-background: #001529;
-    --header-text-color: #ffffff;
-    --footer-background: #001529;
-    --footer-text-color: #aaaaaa;
-    --site-layout-background: rgba(10, 10, 10, 0.65);
+    --background-color: #0a0a0a; /* Couleur de fond principale (sombre) */
+    --text-color: #e8e8e8; /* Couleur du texte principal (clair) */
+    --primary-color: #1890ff; /* Couleur primaire (inchangée) */
+    --card-background-color: rgba(20, 20, 20, 0.75); /* Fond des cartes et modales (sombre, semi-transparent) */
+    --border-color: #303030; /* Couleur des bordures (sombre) */
+    --header-background: #001529; /* Fond de l'en-tête (inchangé) */
+    --header-text-color: #ffffff; /* Couleur du texte de l'en-tête (inchangée) */
+    --footer-background: #001529; /* Fond du pied de page (sombre) */
+    --footer-text-color: #aaaaaa; /* Couleur du texte du pied de page (clair) */
+    --site-layout-background: rgba(10, 10, 10, 0.65); /* Fond du conteneur principal (sombre, semi-transparent) */
   }
 }
 
+/* Applique les couleurs de fond et de texte définies par les variables CSS au corps de la page */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  /* Ajoute une transition douce pour les changements de thème */
   transition: background-color 0.3s, color 0.3s;
 }

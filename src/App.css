@@ -3,6 +3,7 @@
   padding: 24px;
   min-height: 280px;
   border-radius: 8px;
+  backdrop-filter: blur(10px);
 }
 
 
@@ -26,6 +27,7 @@
   background: var(--card-background-color) !important;
   border: 1px solid var(--border-color) !important;
   color: var(--text-color) !important;
+  backdrop-filter: blur(10px);
 }
 
 .ant-card-meta-title {
@@ -36,6 +38,7 @@
 .ant-modal-header {
   background: var(--card-background-color) !important;
   color: var(--text-color) !important;
+  backdrop-filter: blur(10px);
 }
 
 .ant-modal-title {
@@ -88,8 +91,168 @@ h4.ant-typography {
     border-color: var(--border-color);
 }
 
+/* Styles généraux pour le contenu principal du site */
+.site-layout-content {
+  background: var(--site-layout-background); /* Couleur de fond adaptée au thème */
+  padding: 24px;
+  min-height: 280px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px); /* Effet de flou pour le glassmorphism */
+}
+
+/* Style du titre de l'en-tête */
+.header-title {
+  color: var(--header-text-color); /* Couleur du texte de l'en-tête */
+  margin: 0;
+  float: left;
+}
+
+/* Styles pour l'arrière-plan animé (tsparticles) */
+#tsparticles {
+  position: fixed; /* Position fixe pour couvrir toute la fenêtre */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place l'animation derrière le contenu */
+}
+
+/* Styles pour les cartes Ant Design (ex: ProjectCard) */
+.ant-card {
+  background: var(--card-background-color) !important; /* Couleur de fond adaptée au thème */
+  border: 1px solid var(--border-color) !important; /* Couleur de bordure adaptée au thème */
+  color: var(--text-color) !important; /* Couleur du texte adaptée au thème */
+  backdrop-filter: blur(10px); /* Effet de flou pour le glassmorphism */
+}
+
+/* Style du titre des cartes Ant Design */
+.ant-card-meta-title {
+  color: var(--text-color) !important; /* Assure que le titre est lisible */
+}
+
+/* Styles pour le contenu et l'en-tête des modales Ant Design */
+.ant-modal-content,
+.ant-modal-header {
+  background: var(--card-background-color) !important; /* Couleur de fond adaptée au thème */
+  color: var(--text-color) !important; /* Couleur du texte adaptée au thème */
+  backdrop-filter: blur(10px); /* Effet de flou pour le glassmorphism */
+}
+
+/* Style du titre des modales Ant Design */
+.ant-modal-title {
+  color: var(--text-color) !important; /* Assure que le titre est lisible */
+}
+
+/* Style du bouton de fermeture des modales Ant Design */
+.ant-modal-close-x {
+  color: var(--text-color) !important; /* Assure que le bouton est visible */
+}
+
+/* Styles pour l'en-tête et le pied de page de la mise en page Ant Design */
+.ant-layout-header {
+  background: var(--header-background) !important; /* Couleur de fond de l'en-tête */
+}
+
+.ant-layout-footer {
+  background: var(--footer-background) !important; /* Couleur de fond du pied de page */
+  color: var(--footer-text-color) !important; /* Couleur du texte du pied de page */
+}
+
+/* Styles pour les composants personnalisés et les surcharges d'Ant Design */
+
+/* Assure que tous les textes de typographie Ant Design sont lisibles */
+.ant-typography,
+h1.ant-typography,
+h2.ant-typography,
+h3.ant-typography,
+h4.ant-typography {
+  color: var(--text-color) !important;
+}
+
+/* Assure que les étiquettes de formulaire Ant Design sont lisibles */
+.ant-form-item-label > label {
+  color: var(--text-color) !important;
+}
+
+/* Styles pour les champs de saisie Ant Design */
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input:focus,
+.ant-input-focused {
+  background-color: var(--card-background-color) !important; /* Fond adapté au thème */
+  color: var(--text-color) !important; /* Texte adapté au thème */
+  border: 1px solid var(--border-color) !important; /* Bordure adaptée au thème */
+}
+
+/* Style du placeholder des champs de saisie */
+.ant-input::placeholder {
+    color: var(--text-color) !important;
+    opacity: 0.5;
+}
+
+/* Styles pour les tags Ant Design (ex: technologies) */
+.ant-tag {
+    color: var(--text-color); /* Couleur du texte adaptée au thème */
+    background: var(--card-background-color); /* Fond adapté au thème */
+    border-color: var(--border-color); /* Bordure adaptée au thème */
+}
+
+/* Style du bouton de fermeture du tiroir de navigation */
 .ant-drawer-close {
   color: var(--text-color) !important;
+}
+
+/* Style du conteneur du tiroir de navigation pour l'effet de flou */
+.ant-drawer-content-wrapper {
+    backdrop-filter: blur(10px); /* Effet de flou pour le glassmorphism */
+}
+
+/* Styles proactifs pour les boutons par défaut d'Ant Design */
+.ant-btn-default {
+  background-color: var(--card-background-color) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Styles au survol/focus des boutons par défaut */
+.ant-btn-default:hover, .ant-btn-default:focus {
+  background-color: var(--card-background-color) !important;
+  color: var(--primary-color) !important; /* Couleur primaire au survol */
+  border-color: var(--primary-color) !important; /* Bordure primaire au survol */
+}
+
+/* Styles proactifs pour le texte en gras */
+strong, b {
+  color: var(--text-color) !important; /* Assure que le texte en gras est toujours lisible */
+}
+
+/* --- Styles Responsifs --- */
+
+/* Cache les éléments destinés uniquement aux mobiles sur les grands écrans */
+.mobile-only {
+  display: none !important;
+}
+
+/* Affiche les éléments destinés uniquement aux desktops sur les grands écrans */
+.desktop-only {
+  /* Par défaut, les éléments desktop sont visibles */
+}
+
+/* Point de rupture pour les tablettes et appareils mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Cache les éléments desktop sur les petits écrans */
+  .desktop-only {
+    display: none !important;
+  }
+
+  /* Affiche les éléments mobiles sur les petits écrans */
+  .mobile-only {
+    display: inline-block !important;
+  }
+}
+
+.ant-drawer-content-wrapper {
+    backdrop-filter: blur(10px);
 }
 
 /* Proactive fix for default buttons */
