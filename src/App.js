@@ -161,8 +161,8 @@ function App() {
         <div className="header-content">
           <div style={{ display: 'flex', alignItems: 'center' }}>
               {/* Avatar de l'utilisateur dans l'en-tête */}
-              <Avatar size={40} src="https://i.ibb.co/W4JdQgPf/Mypicture.jpg" style={{ marginRight: '15px' }}/>
-              <h1 className="header-title">Mamadou FOFANA</h1>
+              <Avatar size={40} src="https://example" style={{ marginRight: '15px' }}/>
+              <h1 className="header-title">Nom prenom</h1>
           </div>
 
           {/* Menu de navigation pour les écrans larges (desktop-only) */}
@@ -184,7 +184,6 @@ function App() {
 
       {/* Tiroir de navigation (menu mobile) */}
       <Drawer
-          title="Navigation"
           placement="right" // Le tiroir apparaît à droite
           onClose={onCloseDrawer} // Fonction appelée lors de la fermeture du tiroir
           open={drawerVisible} // Contrôle la visibilité du tiroir

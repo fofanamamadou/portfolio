@@ -53,6 +53,7 @@
   color: var(--text-color);
   margin: 0;
   font-weight: 700; /* Police plus affirmée */
+  white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
 .header-menu.ant-menu {

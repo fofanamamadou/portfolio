@@ -53,14 +53,24 @@ const ProjectModal = ({ project, visible, onClose }) => {
       {/* Section des boutons d'action (GitHub et Site Live) */}
       <div>
         {/* Bouton "Code Source" si githubUrl est présent */}
-        {project.githubUrl && (
+        {project.githubUrl_front && (
           <Button 
-            href={project.githubUrl} // Lien vers le dépôt GitHub
+            href={project.githubUrl_front} // Lien vers le dépôt GitHub
             target="_blank" // Ouvre dans un nouvel onglet
             icon={<GithubOutlined />} // Icône GitHub
             style={{ marginRight: '10px' }}
           >
-            Code Source
+            Code Source frontend
+          </Button>
+        )}
+        {project.githubUrl_back && (
+          <Button 
+            href={project.githubUrl_back} // Lien vers le dépôt GitHub
+            target="_blank" // Ouvre dans un nouvel onglet
+            icon={<GithubOutlined />} // Icône GitHub
+            style={{ marginRight: '10px' }}
+          >
+            Code Source backend
           </Button>
         )}
         {/* Bouton "Visiter le Site" si siteUrl est présent */}
