@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Plateforme E-commerce",
+    "title": "Plateforme d'affiliation",
     "description": "Une plateforme e-commerce complète développée avec le stack MERN (MongoDB, Express, React, Node.js). Inclut l'authentification des utilisateurs, la gestion des produits, le panier d'achat et le processus de paiement.",
     "imageUrl": "https://via.placeholder.com/500x300.png?text=Projet+E-commerce",
     "technologies": ["React", "Node.js", "MongoDB", "Express"],
@@ -11,7 +11,7 @@
   },
   {
     "id": 2,
-    "title": "Application de Tâches",
+    "title": "Applications pour gestion des presences",
     "description": "Une application de gestion de tâches simple et intuitive permettant aux utilisateurs de créer, mettre à jour, supprimer et marquer des tâches comme terminées. L'état est géré avec Redux.",
     "imageUrl": "https://via.placeholder.com/500x300.png?text=App+de+Taches",
     "technologies": ["React", "Redux", "CSS"],
@@ -21,7 +21,27 @@
   },
   {
     "id": 3,
-    "title": "Visualiseur de Données",
+    "title": "Application web pour la gestion des stocks",
+    "description": "Un tableau de bord pour visualiser des données en temps réel à l'aide de graphiques interactifs. Construit avec React et une bibliothèque de graphiques comme D3.js ou Chart.js.",
+    "imageUrl": "https://via.placeholder.com/500x300.png?text=Visualiseur+de+Donnees",
+    "technologies": ["React", "D3.js", "API REST"],
+    "githubUrl": "https://github.com/votre_nom/votre_projet",
+    "siteUrl": "https://votre_projet.com",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 4,
+    "title": "Application web pour la gestion des stocks",
+    "description": "Un tableau de bord pour visualiser des données en temps réel à l'aide de graphiques interactifs. Construit avec React et une bibliothèque de graphiques comme D3.js ou Chart.js.",
+    "imageUrl": "https://via.placeholder.com/500x300.png?text=Visualiseur+de+Donnees",
+    "technologies": ["React", "D3.js", "API REST"],
+    "githubUrl": "https://github.com/votre_nom/votre_projet",
+    "siteUrl": "https://votre_projet.com",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 5,
+    "title": "Application web pour la gestion des stocks",
     "description": "Un tableau de bord pour visualiser des données en temps réel à l'aide de graphiques interactifs. Construit avec React et une bibliothèque de graphiques comme D3.js ou Chart.js.",
     "imageUrl": "https://via.placeholder.com/500x300.png?text=Visualiseur+de+Donnees",
     "technologies": ["React", "D3.js", "API REST"],

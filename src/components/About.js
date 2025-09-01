@@ -19,7 +19,7 @@ const About = () => {
         {/* Colonne pour la photo/avatar */}
         <Col xs={24} sm={8} style={{ textAlign: 'center' }}>
           {/* Composant Avatar d'Ant Design, avec une taille de 150px et une icône par défaut */}
-          <Avatar size={150} icon={<UserOutlined />} />
+          <Avatar size={150} src="https://i.ibb.co/W4JdQgPf/Mypicture.jpg" />
         </Col>
 
         {/* Colonne pour le texte de présentation */}
@@ -37,8 +37,7 @@ const About = () => {
             J’ai travaillé avec plusieurs technologies comme <strong>React.js</strong>,
             <strong> React Native</strong>, <strong>Django</strong>, <strong>Node.js</strong>,
             <strong> Spring Boot (Java)</strong> et <strong>PostgreSQL</strong>. Je conçois des
-            APIs REST sécurisées (authentification JWT), j’intègre les frontends web/mobile et je
-            mets en place des pipelines de déploiement fiables.
+            APIs REST sécurisées (authentification JWT) et j’intègre les frontends web/mobile.
           </Paragraph>
           <Paragraph>
             Curieux et rigoureux, j’aime relever des défis techniques, apprendre en continu et

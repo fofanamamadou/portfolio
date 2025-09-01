@@ -1,6 +1,8 @@
 import React from 'react';
-import { Typography, Form, Input, Button, Row, Col, Space } from 'antd'; // Importe les composants Ant Design nécessaires
-import { LinkedinOutlined, GithubOutlined, MailOutlined } from '@ant-design/icons'; // Importe les icônes
+// J'importe le composant 'message' d'Ant Design pour de plus belles notifications
+import { Typography, Form, Input, Button, Row, Col, Space, message as antdMessage } from 'antd';
+import { LinkedinOutlined, GithubOutlined, MailOutlined } from '@ant-design/icons';
+import emailjs from 'emailjs-com'; // Importation de la bibliothèque EmailJS
 
 // Destructure les composants de Typography et Input
 const { Title } = Typography;
@@ -9,10 +11,27 @@ const { TextArea } = Input;
 const Contact = () => {
   // Fonction appelée lors de la soumission du formulaire
   const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-    // TODO: Ici, vous intégreriez une logique d'envoi d'e-mail réelle.
-    // Par exemple, via un service comme EmailJS, Netlify Forms, ou une API backend.
-    alert("Merci pour votre message ! (Simulation d'envoi)");
+    // Les clés sont lues depuis les variables d'environnement (fichier .env)
+    const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    // Ces paramètres seront envoyés à votre modèle EmailJS
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      message: values.message,
+    };
+
+    // Appel de la fonction d'envoi d'EmailJS
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        antdMessage.success('Merci ! Votre message a été envoyé avec succès.');
+      }, (err) => {
+        console.log('FAILED...', err);
+        antdMessage.error("Une erreur s'est produite. Veuillez réessayer plus tard.");
+      });
   };
 
   return (
@@ -67,15 +86,15 @@ const Contact = () => {
           {/* Utilise Space pour espacer horizontalement les icônes */}
           <Space size="large">
             {/* Lien LinkedIn avec icône */}
-            <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/mamadou-fofana-76706429a/" target="_blank" rel="noopener noreferrer">
               <LinkedinOutlined style={{ fontSize: '40px', color: 'var(--text-color)' }} />
             </a>
             {/* Lien GitHub avec icône */}
-            <a href="https://github.com/votre_nom" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/fofanamamadou" target="_blank" rel="noopener noreferrer">
               <GithubOutlined style={{ fontSize: '40px', color: 'var(--text-color)' }} />
             </a>
             {/* Lien Email avec icône */}
-            <a href="mailto:votre.email@example.com">
+            <a href="mailto:madoufof94@gmail.com">
               <MailOutlined style={{ fontSize: '40px', color: 'var(--text-color)' }} />
             </a>
           </Space>

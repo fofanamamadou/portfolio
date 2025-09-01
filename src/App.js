@@ -157,29 +157,29 @@ function App() {
       {init && <Particles id="tsparticles" options={particlesOptions} />}
 
       {/* En-tête de l'application */}
-      <Header style={{ padding: '0 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 1, width: '100%' }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-            {/* Avatar de l'utilisateur dans l'en-tête */}
-            <Avatar size={40} icon={<UserOutlined />} style={{ marginRight: '15px' }}/>
-            <h1 className="header-title">Mon Portfolio</h1>
+      <Header className="app-header">
+        <div className="header-content">
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+              {/* Avatar de l'utilisateur dans l'en-tête */}
+              <Avatar size={40} src="https://i.ibb.co/W4JdQgPf/Mypicture.jpg" style={{ marginRight: '15px' }}/>
+              <h1 className="header-title">Mamadou FOFANA</h1>
+          </div>
+
+          {/* Menu de navigation pour les écrans larges (desktop-only) */}
+          <div className="desktop-only">
+              <Menu
+                  className="header-menu"
+                  mode="horizontal"
+                  items={menuItems}
+                  selectedKeys={[current]} // Met en surbrillance l'élément de menu actif
+              />
+          </div>
+
+          {/* Bouton du menu burger pour les écrans mobiles (mobile-only) */}
+          <Button className="mobile-only" type="text" onClick={showDrawer} style={{color: 'var(--header-text-color)'}}>
+              <MenuOutlined />
+          </Button>
         </div>
-
-        {/* Menu de navigation pour les écrans larges (desktop-only) */}
-        <div className="desktop-only">
-            <Menu
-                theme="dark"
-                mode="horizontal"
-                items={menuItems}
-                selectedKeys={[current]} // Met en surbrillance l'élément de menu actif
-                style={{ lineHeight: '64px', background: 'transparent', borderBottom: 'none', minWidth: '300px' }}
-            />
-        </div>
-
-        {/* Bouton du menu burger pour les écrans mobiles (mobile-only) */}
-        <Button className="mobile-only" type="text" onClick={showDrawer} style={{color: 'white'}}>
-            <MenuOutlined />
-        </Button>
-
       </Header>
 
       {/* Tiroir de navigation (menu mobile) */}
@@ -205,7 +205,7 @@ function App() {
       </Drawer>
 
       {/* Contenu principal de l'application */}
-      <Content style={{ padding: '0 50px', marginTop: '30px', zIndex: 0 }}>
+      <Content className="app-content">
         <div className="site-layout-content">
           {/* Section "À propos de moi" */}
           <div id="about" style={{paddingTop: '70px', marginTop: '-70px'}}><About /></div>
@@ -223,7 +223,7 @@ function App() {
 
       {/* Pied de page de l'application */}
       <Footer style={{ textAlign: 'center', zIndex: 0, background: 'transparent' }}>
-        ©2025 [Votre Nom et Prénom]. Tous droits réservés.
+        ©2025 Mamadou FOFANA. Tous droits réservés.
       </Footer>
     </Layout>
   );

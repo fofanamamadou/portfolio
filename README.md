@@ -4,23 +4,21 @@ Bienvenue sur le dépôt de mon portfolio personnel ! Ce site web est conçu pou
 
 ## Fonctionnalités
 
-*   **Design Responsive :** S'adapte parfaitement à toutes les tailles d'écran (ordinateurs de bureau, tablettes, mobiles).
-*   **Thème Dynamique :** Le site s'ajuste automatiquement au thème clair ou sombre de votre navigateur.
-*   **Arrière-plan Animé :** Un effet de particules subtil en arrière-plan pour une touche moderne et dynamique.
-*   **Sections Claires :**
-    *   **À propos de moi :** Présentation personnelle et parcours.
-    *   **Compétences :** Mise en avant des technologies et outils maîtrisés.
-    *   **Projets :** Vitrine de mes réalisations avec des détails interactifs via des modales.
-    *   **Contact :** Formulaire de contact et liens vers mes profils professionnels.
-*   **Navigation Intuitive :** Menu de navigation fluide avec mise en surbrillance de la section active (scrollspy).
+*   **Design Moderne et Épuré :** Interface professionnelle avec une typographie soignée (Inter) et une palette de couleurs harmonieuse.
+*   **Effet "Glassmorphism" :** L'en-tête et les cartes utilisent un effet de verre dépoli pour un look moderne et une meilleure hiérarchie visuelle.
+*   **Thème Sombre/Clair Automatique :** L'interface s'adapte aux préférences de votre système d'exploitation.
+*   **Micro-interactions :** Des effets de survol subtils sur les cartes de projet et les compétences pour une expérience utilisateur plus dynamique.
+*   **Compétences Visuelles :** Une grille de compétences avec des icônes pour une identification rapide et esthétique des technologies maîtrisées.
+*   **Entièrement Responsive :** Le design s'adapte parfaitement à toutes les tailles d'écran.
+*   **Navigation Fluide :** Un menu "sticky" qui surligne la section active lors du défilement (scrollspy).
 
 ## Technologies Utilisées
 
 *   **Frontend :**
     *   [React](https://react.dev/) : Bibliothèque JavaScript pour la construction d'interfaces utilisateur.
     *   [Ant Design](https://ant.design/) : Bibliothèque de composants UI pour une interface élégante et réactive.
-    *   [react-tsparticles](https://www.npmjs.com/package/react-tsparticles) & [tsparticles](https://www.npmjs.com/package/tsparticles) : Pour l'arrière-plan animé.
-    *   HTML5, CSS3, JavaScript (ES6+)
+    *   [react-icons](https://react-icons.github.io/react-icons/) : Pour l'intégration d'icônes de haute qualité.
+    *   [react-tsparticles](https://www.npmjs.com/package/react-tsparticles) : Pour l'arrière-plan animé et interactif.
 *   **Outils de Développement :**
     *   [Node.js](https://nodejs.org/) & [npm](https://www.npmjs.com/) : Environnement d'exécution JavaScript et gestionnaire de paquets.
     *   [Create React App](https://create-react-app.dev/) (`react-scripts`) : Configuration rapide de l'environnement de développement React.
@@ -58,6 +56,28 @@ npm start
 
 L'application sera accessible dans votre navigateur à l'adresse `http://localhost:3000`.
 
+## Configuration du Formulaire de Contact
+
+Pour que le formulaire de contact fonctionne, vous devez le lier à votre compte [EmailJS](https://www.emailjs.com/).
+
+1.  **Configurez votre compte EmailJS** :
+    *   Connectez votre service d'email (ex: Gmail).
+    *   Créez un nouveau modèle d'email. Vous pouvez copier le code qui se trouve dans le fichier `EMAIL_TEMPLATE.html` (à la racine du projet) et le coller dans la section "Content (HTML)" de votre modèle sur le site d'EmailJS.
+    *   Notez votre **Service ID**, **Template ID**, et **Public Key**.
+
+2.  **Créez un fichier `.env`** à la racine du projet.
+
+3.  **Ajoutez vos clés EmailJS** dans ce fichier comme suit :
+
+    ```env
+    REACT_APP_EMAILJS_SERVICE_ID=VOTRE_SERVICE_ID
+    REACT_APP_EMAILJS_TEMPLATE_ID=VOTRE_TEMPLATE_ID
+    REACT_APP_EMAILJS_PUBLIC_KEY=VOTRE_PUBLIC_KEY
+    ```
+
+4.  **Redémarrez votre serveur** (`npm start`) après avoir modifié le fichier `.env` pour que les changements soient pris en compte.
+
+
 ## Structure du Projet
 
 ```
@@ -82,15 +102,6 @@ L'application sera accessible dans votre navigateur à l'adresse `http://localho
 └── README.md               # Ce fichier
 ```
 
-## Personnalisation
-
-N'oubliez pas de remplacer les informations génériques (votre nom, vos projets, vos liens sociaux, votre photo) par les vôtres. Les fichiers clés à modifier sont :
-*   `src/components/About.js`
-*   `src/components/Skills.js`
-*   `src/components/Contact.js`
-*   `src/data/projects.json`
-*   Le pied de page dans `src/App.js`
-*   L'avatar dans l'en-tête dans `src/App.js`
 
 ## Licence
 
@@ -100,7 +111,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 Pour toute question ou collaboration, n'hésitez pas à me contacter :
 
-*   **Votre Nom :** [Votre Nom et Prénom]
-*   **Email :** [votre.email@example.com]
-*   **LinkedIn :** [Lien vers votre profil LinkedIn]
-*   **GitHub :** [Lien vers votre profil GitHub]
+*   **Mamadou FOFANA**
+*   **Email :** madoufof94@gmail.com
+*   **LinkedIn :** https://www.linkedin.com/in/mamadou-fofana-76706429a/
+*   **GitHub :** https://github.com/fofanamamadou
