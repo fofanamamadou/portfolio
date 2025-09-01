@@ -111,7 +111,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 Pour toute question ou collaboration, n'hésitez pas à me contacter :
 
-*   **Mamadou FOFANA**
-*   **Email :** madoufof94@gmail.com
+*   **Nom prenom**
+*   **Email :** email
 *   **LinkedIn :** https://www.linkedin.com/in/mamadou-fofana-76706429a/
 *   **GitHub :** https://github.com/fofanamamadou
